@@ -18,7 +18,7 @@ const poppins = Poppins({
 
 export default function Home() {
   return (
-    <main className="flex min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-88px)] w-full flex-col md:flex-row pad-x py-6 md:pt-12 md:pb-0">
+    <main className="flex h-fit w-full flex-col md:flex-row pad-x py-6 md:py-12">
       <div className="flex flex-col text-center items-center md:items-end md:text-left w-full md:w-1/2 pr-0 md:pr-8 h-auto gap-y-6 lg:gap-y-8">
         {/* Main Text */}
         <h1
@@ -32,7 +32,7 @@ export default function Home() {
 
         {/* Sub Text */}
         <div className="flex justify-center md:justify-end gap-x-4">
-          <FaArrowRightLong className="w-5 h-5 text-background hidden md:block" />
+          <FaArrowRightLong className="w-5 h-5 text-background hidden md:block translate-y-1" />
           <p className="text-base text-background/80 w-[90%] md:text-lg lg:text-xl font-light">
             We are a digital product design and development company. We help
             businesses build delightful digital experiences.
@@ -52,7 +52,6 @@ export default function Home() {
         </div>
 
         {/* Feature */}
-
       </div>
     </main>
   );
