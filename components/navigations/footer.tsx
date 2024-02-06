@@ -10,7 +10,7 @@ const Footer = () => {
         </h1>
         <div className="w-[2px] h-12 mx-8 bg-transparent hidden lg:block" />
         {/* Newsletter Button */}
-        <div className="w-full md:w-1/2 lg:w-1/3 bg-primary/80 flex group">
+        <div className="w-full md:w-1/2 lg:w-1/3 bg-primary/80 flex group mt-auto">
           <input
             type="email"
             placeholder="Enter your email"
