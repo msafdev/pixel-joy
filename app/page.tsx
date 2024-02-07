@@ -28,7 +28,7 @@ const poppins = Poppins({
 export default function Home() {
   return (
     <main className="flex h-fit w-full flex-col">
-      <section className="flex flex-col md:items-center md:justify-center w-full md:min-h-[calc(100vh-88px)] pad-x py-4 md:py-12 lg:py-20 gap-y-6 lg:gap-y-8">
+      <section className="flex flex-col md:items-center md:justify-center w-full pad-x py-4 md:py-12 lg:py-20 gap-y-6 lg:gap-y-8">
         {/* Main Text */}
         <h1
           className={`text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center ${poppins.className}`}
@@ -54,7 +54,7 @@ export default function Home() {
           <div className="flex items-center justify-center md:justify-start">
             <Link
               href="/"
-              className="border-b-2 pb-1 group flex items-center w-fit anim gap-x-3 text-primary-foreground"
+              className="border-b-2 pb-1 group flex items-end w-fit anim gap-x-3 text-primary-foreground"
             >
               <div className="text-base md:text-lg uppercase font-medium">
                 Learn More
@@ -110,17 +110,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center w-full pad-x py-4 md:py-12 lg:py-20 h-auto gap-y-6 lg:gap-y-8">
+      <section className="flex flex-col items-center w-full pad-x pb-4 md:pb-12 lg:pb-20 pt-0 h-auto gap-y-4 lg:gap-y-6">
         <div className="flex w-full justify-center">
           <Badge head="Epic!" body="What we have to offer" />
         </div>
 
         {/* Cards */}
-        <div className="grid lg:grid-cols-3 gap-4 w-full">
-          <div className="w-full h-fit bg-background/40 rounded-lg flex flex-col">
+        <div className="grid md:grid-cols-3 gap-4 w-full">
+          <div className="w-full h-auto aspect-[3/2] bg-background/40 rounded-lg flex flex-col">
             <div className="flex justify-between items-center">
               <CardBadge
-                text="Web Development"
+                text="Development"
                 className="translate-y-1 rounded-t-lg"
               />
               <div className="flex gap-x-2 px-2">
@@ -129,26 +129,23 @@ export default function Home() {
                 <div className="w-3 h-3 bg-red-500 rounded-full" />
               </div>
             </div>
-            <div className="w-full h-[200px] md:h-[250px] lg:h-[300px] bg-background flex flex-col rounded-b-lg rounded-tr-lg"></div>
+            <div className="w-full h-full bg-background flex flex-col rounded-b-lg rounded-tr-lg"></div>
           </div>
-          <div className="w-full h-fit bg-background/40 rounded-lg flex flex-col">
+          <div className="w-full h-auto aspect-[3/2] bg-background/40 rounded-lg flex flex-col">
             <div className="flex justify-between items-center">
-              <CardBadge
-                text="UI Design"
-                className="translate-y-1 rounded-t-lg"
-              />
+              <CardBadge text="Design" className="translate-y-1 rounded-t-lg" />
               <div className="flex gap-x-2 px-2">
                 <div className="w-3 h-3 bg-green-400 rounded-full" />
                 <div className="w-3 h-3 bg-yellow-400 rounded-full" />
                 <div className="w-3 h-3 bg-red-500 rounded-full" />
               </div>
             </div>
-            <div className="w-full h-[200px] md:h-[250px] lg:h-[300px] bg-background flex flex-col rounded-b-lg rounded-tr-lg"></div>
+            <div className="w-full h-full bg-background flex flex-col rounded-b-lg rounded-tr-lg"></div>
           </div>
-          <div className="w-full h-fit bg-background/40 rounded-lg flex flex-col">
+          <div className="w-full h-auto aspect-[3/2] bg-background/40 rounded-lg flex flex-col">
             <div className="flex justify-between items-center">
               <CardBadge
-                text="IT Consultant"
+                text="Consultant"
                 className="translate-y-1 rounded-t-lg"
               />
               <div className="flex gap-x-2 px-2">
@@ -157,7 +154,7 @@ export default function Home() {
                 <div className="w-3 h-3 bg-red-500 rounded-full" />
               </div>
             </div>
-            <div className="w-full h-[200px] md:h-[250px] lg:h-[300px] bg-background flex flex-col rounded-b-lg rounded-tr-lg"></div>
+            <div className="w-full h-full bg-background flex flex-col rounded-b-lg rounded-tr-lg"></div>
           </div>
         </div>
       </section>
