@@ -1,11 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const MenuBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const toggleMenu = () => {
+    if (isOpen) {
+      setIsOpen(false);
+      document.body.style.overflow = "unset";
+    } else {
+      setIsOpen(true);
+      document.body.style.overflow = "hidden";
+    }
+  };
 
   return (
     <>
@@ -34,4 +42,5 @@ const MenuBar = () => {
     </>
   );
 };
+
 export default MenuBar;
