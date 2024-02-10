@@ -10,6 +10,10 @@
   .anim {
     @apply transition-all ease-in-out duration-300;
   }
+
+  .anim-slow {
+    @apply transition-all ease-in-out duration-500;
+  }
 }
 
 @layer base {
