@@ -6,6 +6,7 @@ import { Poppins } from "next/font/google";
 
 // Icons
 import { FaArrowRight, FaAsterisk } from "react-icons/fa";
+import { FcCustomerSupport, FcIdea, FcServices } from "react-icons/fc";
 
 // Assets
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -54,7 +55,7 @@ export default function Home() {
           <div className="flex items-center justify-center md:justify-start">
             <Link
               href="/"
-              className="border-b-2 pb-1 group flex items-end w-fit anim gap-x-3 text-primary-foreground"
+              className="border-b-2 pb-1 hover:pr-3 group flex items-end w-fit anim gap-x-3 text-primary-foreground anim"
             >
               <div className="text-base md:text-lg uppercase font-medium">
                 Learn More
@@ -83,7 +84,7 @@ export default function Home() {
             </div>
             <Link
               href="/"
-              className="border-b-2 pb-1 group flex items-end w-fit anim gap-x-3 text-primary-foreground"
+              className="border-b-2 pb-1 hover:pl-3 group flex items-end w-fit anim gap-x-3 text-primary-foreground anim"
             >
               <div className="text-sm md:text-base uppercase font-medium">
                 Our Team
@@ -91,7 +92,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex flex-col md:flex-row border-2 rounded-xl md:border-0 items-center w-full md:col-start-2 lg:col-start-3 md:col-span-3">
+          <div className="flex flex-col mx-auto max-w-[400px] md:max-w-none md:flex-row border-2 rounded-xl md:border-0 items-center w-full md:col-start-2 lg:col-start-3 md:col-span-3">
             <div className="flex flex-col gap-y-3 w-full p-3 rounded-t-[10px] bg-foreground hover:bg-background/40 hover:md:bg-foreground anim">
               <p className="text-sm text-center text-background md:text-base lg:text-lg font-light">
                 Unlimited design and development support for your business.
@@ -110,51 +111,81 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center w-full pad-x pb-4 md:pb-12 lg:pb-20 pt-0 h-auto gap-y-4 lg:gap-y-6">
+      <section className="flex flex-col items-center w-full pad-x pb-4 md:pb-20 lg:pb-28 pt-0 h-auto gap-y-4 lg:gap-y-6">
         <div className="flex w-full justify-center">
           <Badge head="Epic!" body="What we have to offer" />
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-4 w-full">
-          <div className="w-full h-auto aspect-[3/2] bg-background/40 rounded-lg flex flex-col">
+        <div className="grid xl:grid-cols-3 gap-4 w-full">
+          <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-none mx-auto h-fit xl:h-auto bg-background/40 rounded-lg flex flex-col xl:anim-slow xl:translate-y-8">
             <div className="flex justify-between items-center">
-              <CardBadge
-                text="Development"
-                className="translate-y-1 rounded-t-lg"
-              />
+              <CardBadge text="X" className="translate-y-1 rounded-t-lg" />
               <div className="flex gap-x-2 px-2">
                 <div className="w-3 h-3 bg-green-400 rounded-full" />
                 <div className="w-3 h-3 bg-yellow-400 rounded-full" />
                 <div className="w-3 h-3 bg-red-500 rounded-full" />
               </div>
             </div>
-            <div className="w-full h-full bg-background flex flex-col rounded-b-lg rounded-tr-lg"></div>
+            <div className="w-full h-full bg-background rounded-b-lg rounded-tr-lg p-1">
+              <div className="flex flex-col w-full h-full bg-gray-50 p-6 rounded-lg border-2 group">
+                <FcServices className="w-14 h-14 md:w-12 md:h-12 xl:w-16 xl:h-16 text-primary" />
+                <h1 className="flex flex-col text-2xl xl:text-[1.8vw] text-foreground font-semibold mt-3 xl:mt-4 w-fit xl:w-full anim group cursor-default">
+                  Ship Faster
+                  <div className="w-[calc(100%+24px)] xl:w-0 xl:group-hover:w-[calc(100%+48px)] mt-1 mb-4 h-[2px] -translate-x-6 bg-gray-200 anim" />
+                </h1>
+                <p className="text-base lg:text-lg xl:text-[1.4vw] 2xl:text-[1.3vw] xl:leading-snug text-foreground/80 w-full lg:w-2/3 xl:w-full xl:pl-0">
+                  Build and ship your digital products faster with our team of
+                  experts.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="w-full h-auto aspect-[3/2] bg-background/40 rounded-lg flex flex-col">
+          <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-none mx-auto h-fit xl:h-auto bg-background/40 rounded-lg flex flex-col xl:anim-slow">
             <div className="flex justify-between items-center">
-              <CardBadge text="Design" className="translate-y-1 rounded-t-lg" />
+              <CardBadge text="X" className="translate-y-1 rounded-t-lg" />
               <div className="flex gap-x-2 px-2">
                 <div className="w-3 h-3 bg-green-400 rounded-full" />
                 <div className="w-3 h-3 bg-yellow-400 rounded-full" />
                 <div className="w-3 h-3 bg-red-500 rounded-full" />
               </div>
             </div>
-            <div className="w-full h-full bg-background flex flex-col rounded-b-lg rounded-tr-lg"></div>
+            <div className="w-full h-full bg-background rounded-b-lg rounded-tr-lg p-1">
+              <div className="flex flex-col w-full h-full bg-gray-50 p-6 rounded-lg border-2 group">
+                <FcIdea className="w-14 h-14 md:w-12 md:h-12 xl:w-16 xl:h-16 text-primary" />
+                <h1 className="flex flex-col text-2xl xl:text-[1.8vw] text-foreground font-semibold mt-3 xl:mt-4 w-fit xl:w-full anim group cursor-default">
+                  Your Ideas
+                  <div className="w-[calc(100%+24px)] xl:w-0 group-hover:w-[calc(100%+24px)] xl:group-hover:w-[calc(100%+48px)] mt-1 mb-4 h-[2px] -translate-x-6 bg-gray-200 anim" />
+                </h1>
+                <p className="text-base lg:text-lg xl:text-[1.4vw] 2xl:text-[1.3vw] xl:leading-snug text-foreground/80 w-full lg:w-2/3 xl:w-full xl:pl-0">
+                  Here at Pixel Joy, we value your ideas and we will help you
+                  bring them to life.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="w-full h-auto aspect-[3/2] bg-background/40 rounded-lg flex flex-col">
+          <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-none mx-auto h-fit xl:h-auto bg-background/40 rounded-lg flex flex-col xl:anim-slow xl:translate-y-8">
             <div className="flex justify-between items-center">
-              <CardBadge
-                text="Consultant"
-                className="translate-y-1 rounded-t-lg"
-              />
+              <CardBadge text="X" className="translate-y-1 rounded-t-lg" />
               <div className="flex gap-x-2 px-2">
                 <div className="w-3 h-3 bg-green-400 rounded-full" />
                 <div className="w-3 h-3 bg-yellow-400 rounded-full" />
                 <div className="w-3 h-3 bg-red-500 rounded-full" />
               </div>
             </div>
-            <div className="w-full h-full bg-background flex flex-col rounded-b-lg rounded-tr-lg"></div>
+            <div className="w-full h-full bg-background rounded-b-lg rounded-tr-lg p-1">
+              <div className="flex flex-col w-full h-full bg-gray-50 p-6 rounded-lg border-2 group">
+                <FcCustomerSupport className="w-14 h-14 md:w-12 md:h-12 xl:w-16 xl:h-16 text-primary" />
+                <h1 className="flex flex-col text-2xl xl:text-[1.8vw] text-foreground font-semibold mt-3 xl:mt-4 w-fit xl:w-full anim group cursor-default">
+                  Full Support
+                  <div className="w-[calc(100%+24px)] xl:w-0 group-hover:w-[calc(100%+24px)] xl:group-hover:w-[calc(100%+48px)] mt-1 mb-4 h-[2px] -translate-x-6 bg-gray-200 anim" />
+                </h1>
+                <p className="text-base lg:text-lg xl:text-[1.4vw] 2xl:text-[1.3vw] xl:leading-snug text-foreground/80 w-full lg:w-2/3 xl:w-full xl:pl-0">
+                  Full control and support for your digital products. We are
+                  here to help.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
