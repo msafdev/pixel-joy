@@ -26,7 +26,7 @@ const Section1 = () => {
     <section className="flex flex-col md:items-center md:justify-center w-full pad-x py-4 md:py-12 lg:py-20 gap-y-6 lg:gap-y-8">
       {/* Main Text */}
       <h1
-        className={`text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center ${poppins.className}`}
+        className={`text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center font-medium ${poppins.className}`}
       >
         Transform Your Business{" "}
         <FaArrowRight className="inline-block w-4 h-4 lg:w-8 lg:h-8 text-foreground/60" />{" "}
@@ -39,7 +39,7 @@ const Section1 = () => {
         {/* Sub Text */}
         <div className="flex justify-center md:justify-start gap-x-4 max-w-lg">
           <FaArrowRightLong className="w-5 h-5 text-foreground hidden md:block translate-y-1" />
-          <p className="text-base text-center md:text-left text-foreground/80 w-[90%] md:text-lg lg:text-xl">
+          <p className="text-base font-medium text-center md:text-left text-foreground/80 w-[90%] md:text-lg lg:text-xl">
             We are a digital product design and development company. We help
             businesses build delightful digital experiences.
           </p>
