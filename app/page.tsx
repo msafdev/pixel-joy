@@ -52,7 +52,7 @@ export default function Home() {
           </div>
 
           {/* CTAs */}
-          <div className="flex items-center justify-center md:justify-start">
+          <div className="flex items-center justify-center md:justify-start min-w-[120px]">
             <Link
               href="/"
               className="border-b-2 border-foreground/80 pb-1 hover:pr-3 group flex items-end w-fit anim gap-x-3 text-foreground anim"
@@ -66,7 +66,7 @@ export default function Home() {
 
         {/* Feature */}
         <div className="w-full md:w-[90%] grid md:grid-cols-4 lg:grid-cols-5 gap-y-6">
-          <div className="flex md:flex-col gap-y-2 justify-around md:justify-center items-center md:items-start">
+          <div className="flex md:flex-col flex-wrap gap-y-2 justify-around md:justify-center items-center md:items-start">
             <div className="flex items-center -space-x-3">
               {AvatarAsset.map((avatar, index) => (
                 <div
@@ -84,7 +84,7 @@ export default function Home() {
             </div>
             <Link
               href="/"
-              className="border-b-2 border-foreground/80 pb-1 hover:pl-3 group flex items-end w-fit anim gap-x-3 text-foreground anim"
+              className="border-b-2 border-foreground/80 pb-1 hover:pl-3 group flex items-end w-fit anim gap-x-3 text-foreground anim min-w-[70px]"
             >
               <div className="text-sm md:text-base uppercase font-medium">
                 Our Team
@@ -92,21 +92,11 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex flex-col mx-auto max-w-[400px] md:max-w-none md:flex-row rounded-xl items-center w-full md:col-start-2 lg:col-start-3 md:col-span-3">
-            <div className="flex flex-col gap-y-3 w-full p-3 rounded-t-[10px] anim">
-              <p className="text-sm text-center text-foreground md:text-base lg:text-lg">
-                Unlimited design and development support for your business.
-              </p>
-            </div>
-
-            {/* Border */}
-            <code className="font-semibold text-xl mx-4">&</code>
-
-            <div className="flex flex-col gap-y-3 w-full p-3 rounded-b-[10px] anim">
-              <p className="text-sm text-center text-foreground md:text-base lg:text-lg">
-                Continuous improvement and support for your digital products.
-              </p>
-            </div>
+          <div className="flex flex-col mx-auto md:mx-0 md:ml-auto max-w-[400px] gap-y-2 md:items-end w-full md:col-start-2 lg:col-start-3 md:col-span-3">
+            <p className="text-sm text-center md:text-end">Our mission</p>
+            <h2 className="font-medium text-center md:text-end">
+              Let's change your product with a more joyful experience
+            </h2>
           </div>
         </div>
       </section>
@@ -131,9 +121,9 @@ export default function Home() {
           </Link>
         </div>
         {/* Services */}
-        <div className="flex w-full pad-x gap-x-4 py-8 group hover:text-background hover:bg-foreground anim">
+        <div className="flex w-full pad-x gap-x-4 py-8 group hover:text-background hover:bg-foreground anim cursor-pointer">
           <code className="text-sm md:text-base lg:text-lg">01</code>
-          <h2 className="text-2xl lg:text-5xl 2xl:text-6xl font-semibold">
+          <h2 className="text-2xl lg:text-5xl 2xl:text-6xl font-medium">
             Website Development
           </h2>
           <div className="flex flex-col ml-auto justify-end">
@@ -143,9 +133,9 @@ export default function Home() {
             </h3>
           </div>
         </div>
-        <div className="flex w-full pad-x gap-x-4 py-8 group hover:text-background hover:bg-foreground anim">
+        <div className="flex w-full pad-x gap-x-4 py-8 group hover:text-background hover:bg-foreground anim cursor-pointer">
           <code className="text-sm md:text-base lg:text-lg">02</code>
-          <h2 className="text-2xl lg:text-5xl 2xl:text-6xl font-semibold">
+          <h2 className="text-2xl lg:text-5xl 2xl:text-6xl font-medium">
             UI/UX Design
           </h2>
           <div className="flex flex-col ml-auto justify-end">
@@ -155,9 +145,9 @@ export default function Home() {
             </h3>
           </div>
         </div>
-        <div className="flex w-full pad-x gap-x-4 py-8 group hover:text-background hover:bg-foreground anim">
+        <div className="flex w-full pad-x gap-x-4 py-8 group hover:text-background hover:bg-foreground anim cursor-pointer">
           <code className="text-sm md:text-base lg:text-lg">03</code>
-          <h2 className="text-2xl lg:text-5xl 2xl:text-6xl font-semibold">
+          <h2 className="text-2xl lg:text-5xl 2xl:text-6xl font-medium">
             Mobile Development
           </h2>
           <div className="flex flex-col ml-auto justify-end">
