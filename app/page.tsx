@@ -6,10 +6,10 @@ import { Poppins } from "next/font/google";
 
 // Icons
 import { FaArrowRight, FaAsterisk } from "react-icons/fa";
-import { FcCustomerSupport, FcIdea, FcServices } from "react-icons/fc";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { HiArrowLongRight } from "react-icons/hi2";
 
 // Assets
-import { FaArrowRightLong } from "react-icons/fa6";
 import Ava1 from "@/public/assets/avatar/avatar-1.jpg";
 import Ava2 from "@/public/assets/avatar/avatar-2.jpg";
 import Ava3 from "@/public/assets/avatar/avatar-3.png";
@@ -35,7 +35,7 @@ export default function Home() {
           className={`text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center ${poppins.className}`}
         >
           Transform Your Business{" "}
-          <FaArrowRight className="inline-block w-4 h-4 lg:w-8 lg:h-8 text-background/50" />{" "}
+          <FaArrowRight className="inline-block w-4 h-4 lg:w-8 lg:h-8 text-foreground/60" />{" "}
           With Delightful Digital Experiences{" "}
           <FaAsterisk className="inline-block w-4 h-4 lg:w-8 lg:h-8 text-primary" />
         </h1>
@@ -44,8 +44,8 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between md:w-[90%] gap-x-12 gap-y-6">
           {/* Sub Text */}
           <div className="flex justify-center md:justify-start gap-x-4 max-w-lg">
-            <FaArrowRightLong className="w-5 h-5 text-background hidden md:block translate-y-1" />
-            <p className="text-base text-center md:text-left text-background/80 w-[90%] md:text-lg lg:text-xl font-light">
+            <FaArrowRightLong className="w-5 h-5 text-foreground hidden md:block translate-y-1" />
+            <p className="text-base text-center md:text-left text-foreground/80 w-[90%] md:text-lg lg:text-xl">
               We are a digital product design and development company. We help
               businesses build delightful digital experiences.
             </p>
@@ -55,7 +55,7 @@ export default function Home() {
           <div className="flex items-center justify-center md:justify-start">
             <Link
               href="/"
-              className="border-b-2 pb-1 hover:pr-3 group flex items-end w-fit anim gap-x-3 text-primary-foreground anim"
+              className="border-b-2 border-foreground/80 pb-1 hover:pr-3 group flex items-end w-fit anim gap-x-3 text-foreground anim"
             >
               <div className="text-base md:text-lg uppercase font-medium">
                 Learn More
@@ -71,7 +71,7 @@ export default function Home() {
               {AvatarAsset.map((avatar, index) => (
                 <div
                   key={index}
-                  className="w-10 h-10 rounded-full overflow-hidden bg-black border-2 border-background/20"
+                  className="w-10 h-10 rounded-full overflow-hidden bg-black border-2 border-foreground"
                 >
                   <Image
                     src={avatar}
@@ -84,7 +84,7 @@ export default function Home() {
             </div>
             <Link
               href="/"
-              className="border-b-2 pb-1 hover:pl-3 group flex items-end w-fit anim gap-x-3 text-primary-foreground anim"
+              className="border-b-2 border-foreground/80 pb-1 hover:pl-3 group flex items-end w-fit anim gap-x-3 text-foreground anim"
             >
               <div className="text-sm md:text-base uppercase font-medium">
                 Our Team
@@ -92,18 +92,18 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex flex-col mx-auto max-w-[400px] md:max-w-none md:flex-row border-2 rounded-xl md:border-0 items-center w-full md:col-start-2 lg:col-start-3 md:col-span-3">
-            <div className="flex flex-col gap-y-3 w-full p-3 rounded-t-[10px] bg-foreground hover:bg-background/40 hover:md:bg-foreground anim">
-              <p className="text-sm text-center text-background md:text-base lg:text-lg font-light">
+          <div className="flex flex-col mx-auto max-w-[400px] md:max-w-none md:flex-row rounded-xl items-center w-full md:col-start-2 lg:col-start-3 md:col-span-3">
+            <div className="flex flex-col gap-y-3 w-full p-3 rounded-t-[10px] anim">
+              <p className="text-sm text-center text-foreground md:text-base lg:text-lg">
                 Unlimited design and development support for your business.
               </p>
             </div>
 
             {/* Border */}
-            <div className="md:w-[3px] md:h-12 w-full h-[2px] bg-background flex mx-4 md:rounded-full" />
+            <code className="font-semibold text-xl mx-4">&</code>
 
-            <div className="flex flex-col gap-y-3 w-full p-3 rounded-b-[10px] bg-foreground hover:bg-background/40 hover:md:bg-foreground anim">
-              <p className="text-sm text-center text-background md:text-base lg:text-lg font-light">
+            <div className="flex flex-col gap-y-3 w-full p-3 rounded-b-[10px] anim">
+              <p className="text-sm text-center text-foreground md:text-base lg:text-lg">
                 Continuous improvement and support for your digital products.
               </p>
             </div>
@@ -111,81 +111,60 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center w-full pad-x pb-4 md:pb-20 lg:pb-28 pt-0 h-auto gap-y-4 lg:gap-y-6">
-        <div className="flex w-full justify-center">
-          <Badge head="Epic!" body="What we have to offer" />
-        </div>
+      <section className="flex flex-col w-full pt-8 h-auto bg-background text-foreground">
+        <div className="flex pad-x pb-4 w-full items-center justify-between">
+          <div className="flex flex-col">
+            <p className="font-medium text-lg">Our services</p>
+            <h1 className="text-2xl lg:text-3xl 2xl:text-4xl font-semibold">
+              What We Do
+            </h1>
+          </div>
 
-        {/* Cards */}
-        <div className="grid xl:grid-cols-3 gap-4 w-full">
-          <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-none mx-auto h-fit xl:h-auto bg-background/40 rounded-lg flex flex-col xl:anim-slow xl:translate-y-8">
-            <div className="flex justify-between items-center">
-              <CardBadge text="X" className="translate-y-1 rounded-t-lg" />
-              <div className="flex gap-x-2 px-2">
-                <div className="w-3 h-3 bg-green-400 rounded-full" />
-                <div className="w-3 h-3 bg-yellow-400 rounded-full" />
-                <div className="w-3 h-3 bg-red-500 rounded-full" />
-              </div>
+          <Link
+            href="/"
+            className="border-b-2 border-foreground/80 pb-1 hover:pl-3 group flex items-center w-fit anim gap-x-3 text-foreground anim"
+          >
+            <div className="text-base md:text-lg uppercase font-medium">
+              View all
             </div>
-            <div className="w-full h-full bg-background rounded-b-lg rounded-tr-lg p-1">
-              <div className="flex flex-col w-full h-full bg-gray-50 p-6 rounded-lg border-2 group">
-                <FcServices className="w-14 h-14 md:w-12 md:h-12 xl:w-16 xl:h-16 text-primary" />
-                <h1 className="flex flex-col text-2xl xl:text-[1.8vw] text-foreground font-semibold mt-3 xl:mt-4 w-fit xl:w-full anim group cursor-default">
-                  Ship Faster
-                  <div className="w-[calc(100%+24px)] xl:w-0 xl:group-hover:w-[calc(100%+48px)] mt-1 mb-4 h-[2px] -translate-x-6 bg-gray-200 anim" />
-                </h1>
-                <p className="text-base lg:text-lg xl:text-[1.4vw] 2xl:text-[1.3vw] xl:leading-snug text-foreground/80 w-full lg:w-2/3 xl:w-full xl:pl-0">
-                  Build and ship your digital products faster with our team of
-                  experts.
-                </p>
-              </div>
-            </div>
+            <HiArrowLongRight className="w-6 h-6 text-foreground" />
+          </Link>
+        </div>
+        {/* Services */}
+        <div className="flex w-full pad-x gap-x-4 py-8 group hover:text-background hover:bg-foreground anim">
+          <code className="text-sm md:text-base lg:text-lg">01</code>
+          <h2 className="text-2xl lg:text-5xl 2xl:text-6xl font-semibold">
+            Website Development
+          </h2>
+          <div className="flex flex-col ml-auto justify-end">
+            <p className="text-end text-xs md:text-sm">Learn more</p>
+            <h3 className="font-medium text-end text-xl hidden md:block">
+              Next, React, Webflow
+            </h3>
           </div>
-          <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-none mx-auto h-fit xl:h-auto bg-background/40 rounded-lg flex flex-col xl:anim-slow">
-            <div className="flex justify-between items-center">
-              <CardBadge text="X" className="translate-y-1 rounded-t-lg" />
-              <div className="flex gap-x-2 px-2">
-                <div className="w-3 h-3 bg-green-400 rounded-full" />
-                <div className="w-3 h-3 bg-yellow-400 rounded-full" />
-                <div className="w-3 h-3 bg-red-500 rounded-full" />
-              </div>
-            </div>
-            <div className="w-full h-full bg-background rounded-b-lg rounded-tr-lg p-1">
-              <div className="flex flex-col w-full h-full bg-gray-50 p-6 rounded-lg border-2 group">
-                <FcIdea className="w-14 h-14 md:w-12 md:h-12 xl:w-16 xl:h-16 text-primary" />
-                <h1 className="flex flex-col text-2xl xl:text-[1.8vw] text-foreground font-semibold mt-3 xl:mt-4 w-fit xl:w-full anim group cursor-default">
-                  Your Ideas
-                  <div className="w-[calc(100%+24px)] xl:w-0 group-hover:w-[calc(100%+24px)] xl:group-hover:w-[calc(100%+48px)] mt-1 mb-4 h-[2px] -translate-x-6 bg-gray-200 anim" />
-                </h1>
-                <p className="text-base lg:text-lg xl:text-[1.4vw] 2xl:text-[1.3vw] xl:leading-snug text-foreground/80 w-full lg:w-2/3 xl:w-full xl:pl-0">
-                  Here at Pixel Joy, we value your ideas and we will help you
-                  bring them to life.
-                </p>
-              </div>
-            </div>
+        </div>
+        <div className="flex w-full pad-x gap-x-4 py-8 group hover:text-background hover:bg-foreground anim">
+          <code className="text-sm md:text-base lg:text-lg">02</code>
+          <h2 className="text-2xl lg:text-5xl 2xl:text-6xl font-semibold">
+            UI/UX Design
+          </h2>
+          <div className="flex flex-col ml-auto justify-end">
+            <p className="text-end text-xs md:text-sm">Learn more</p>
+            <h3 className="font-medium text-end text-xl hidden md:block">
+              Figma
+            </h3>
           </div>
-          <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-none mx-auto h-fit xl:h-auto bg-background/40 rounded-lg flex flex-col xl:anim-slow xl:translate-y-8">
-            <div className="flex justify-between items-center">
-              <CardBadge text="X" className="translate-y-1 rounded-t-lg" />
-              <div className="flex gap-x-2 px-2">
-                <div className="w-3 h-3 bg-green-400 rounded-full" />
-                <div className="w-3 h-3 bg-yellow-400 rounded-full" />
-                <div className="w-3 h-3 bg-red-500 rounded-full" />
-              </div>
-            </div>
-            <div className="w-full h-full bg-background rounded-b-lg rounded-tr-lg p-1">
-              <div className="flex flex-col w-full h-full bg-gray-50 p-6 rounded-lg border-2 group">
-                <FcCustomerSupport className="w-14 h-14 md:w-12 md:h-12 xl:w-16 xl:h-16 text-primary" />
-                <h1 className="flex flex-col text-2xl xl:text-[1.8vw] text-foreground font-semibold mt-3 xl:mt-4 w-fit xl:w-full anim group cursor-default">
-                  Full Support
-                  <div className="w-[calc(100%+24px)] xl:w-0 group-hover:w-[calc(100%+24px)] xl:group-hover:w-[calc(100%+48px)] mt-1 mb-4 h-[2px] -translate-x-6 bg-gray-200 anim" />
-                </h1>
-                <p className="text-base lg:text-lg xl:text-[1.4vw] 2xl:text-[1.3vw] xl:leading-snug text-foreground/80 w-full lg:w-2/3 xl:w-full xl:pl-0">
-                  Full control and support for your digital products. We are
-                  here to help.
-                </p>
-              </div>
-            </div>
+        </div>
+        <div className="flex w-full pad-x gap-x-4 py-8 group hover:text-background hover:bg-foreground anim">
+          <code className="text-sm md:text-base lg:text-lg">03</code>
+          <h2 className="text-2xl lg:text-5xl 2xl:text-6xl font-semibold">
+            Mobile Development
+          </h2>
+          <div className="flex flex-col ml-auto justify-end">
+            <p className="text-end text-xs md:text-sm">Learn more</p>
+            <h3 className="font-medium text-end text-xl hidden md:block">
+              React Native, Flutter
+            </h3>
           </div>
         </div>
       </section>

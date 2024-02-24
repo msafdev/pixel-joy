@@ -38,11 +38,11 @@ const NavItem = () => {
     <>
       <div className="hidden md:flex flex-col items-center font-medium md:-translate-x-12 peer-hover:translate-x-0 anim">
         <h2 className="text-sm text-primary">JKT</h2>
-        <p className="text-sm text-background/60 min-w-[50px] min-h-[20px]">
+        <p className="text-sm text-foreground/60 min-w-[50px] min-h-[20px]">
           {currentTime || <Skeleton />}
         </p>
       </div>
-      <div className="hidden md:flex items-center text-lg ml-auto gap-x-6">
+      <div className="hidden md:flex items-center text-lg ml-auto gap-x-6 font-medium">
         <a href="#" className="flex flex-col items-center relative anim">
           Service
           <div className="w-[5px] h-[5px] bg-primary rounded-full absolute bottom-0 translate-y-[5px]" />

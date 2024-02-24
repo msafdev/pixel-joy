@@ -22,18 +22,18 @@ const MenuBar = () => {
         className="flex md:hidden z-30 flex-col w-[32px] h-[32px] items-center justify-center gap-y-2 ml-auto cursor-pointer"
       >
         <div
-          className={`w-full h-[2px] bg-background anim ${
-            isOpen ? "rotate-45 translate-y-[5px] bg-destructive" : ""
+          className={`w-full h-[2px] bg-foreground anim ${
+            isOpen ? "rotate-45 translate-y-[5px] bg-red-500 h-[3px]" : ""
           }`}
         />
         <div
-          className={`w-full h-[2px] bg-background anim ${
-            isOpen ? "-rotate-45 -translate-y-[5px] bg-destructive" : ""
+          className={`w-full h-[2px] bg-foreground anim ${
+            isOpen ? "-rotate-45 -translate-y-[5px] bg-red-500 h-[3px]" : ""
           }`}
         />
       </div>
       <div
-        className={`w-full min-h-screen absolute top-0 left-0 bg-accent text-accent-foreground z-20 transition-all ease-in-out duration-500 pt-20 ${
+        className={`w-full min-h-screen absolute top-0 left-0 bg-foreground text-background z-20 transition-all ease-in-out duration-500 pt-20 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

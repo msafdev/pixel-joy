@@ -3,14 +3,14 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="w-full h-fit bg-primary text-background flex flex-col justify-center items-center pad-x py-12 md:py-20 lg:py-28">
+    <footer className="w-full h-fit bg-foreground text-background flex flex-col justify-center items-center pad-x py-12 md:py-20 lg:py-28">
       <div className="flex flex-col gap-y-6 h-fit lg:flex-row items-center justify-between w-full">
         <h1 className="text-xl md:text-3xl font-medium text-center lg:text-left w-full md:w-2/3">
           Join our newsletter to keep updated with our latest news and offers.
         </h1>
         <div className="w-[2px] h-12 mx-8 bg-transparent hidden lg:block" />
         {/* Newsletter Button */}
-        <div className="w-full md:w-1/2 lg:w-1/3 bg-primary/80 flex group mt-auto">
+        <div className="w-full md:w-1/2 lg:w-1/3 bg-foreground flex group mt-auto">
           <input
             type="email"
             placeholder="Enter your email"

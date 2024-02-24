@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-foreground text-background ${poppins.className}`}>
+      <body className={`bg-background text-foreground ${poppins.className}`}>
         <>
           <Navbar />
           {children}
