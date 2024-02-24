@@ -17,7 +17,10 @@ import Ava4 from "@/public/assets/avatar/avatar-4.png";
 
 // Components
 import Badge from "@/components/shared/badge";
-import CardBadge from "@/components/shared/cardbadge";
+import Offer from "@/components/main/offer";
+
+// Constants
+import { offerList } from "@/utils/constants/constant";
 
 const AvatarAsset = [Ava1, Ava2, Ava3, Ava4];
 
