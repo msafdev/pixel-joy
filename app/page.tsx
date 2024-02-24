@@ -17,7 +17,10 @@ import Ava4 from "@/public/assets/avatar/avatar-4.png";
 
 // Components
 import Badge from "@/components/shared/badge";
-import CardBadge from "@/components/shared/cardbadge";
+import Offer from "@/components/main/offer";
+
+// Constants
+import { offerList } from "@/utils/constants/constant";
 
 const AvatarAsset = [Ava1, Ava2, Ava3, Ava4];
 
@@ -118,75 +121,14 @@ export default function Home() {
 
         {/* Cards */}
         <div className="grid xl:grid-cols-3 gap-4 w-full">
-          <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-none mx-auto h-fit xl:h-auto bg-background/40 rounded-lg flex flex-col xl:anim-slow xl:translate-y-8">
-            <div className="flex justify-between items-center">
-              <CardBadge text="X" className="translate-y-1 rounded-t-lg" />
-              <div className="flex gap-x-2 px-2">
-                <div className="w-3 h-3 bg-green-400 rounded-full" />
-                <div className="w-3 h-3 bg-yellow-400 rounded-full" />
-                <div className="w-3 h-3 bg-red-500 rounded-full" />
-              </div>
-            </div>
-            <div className="w-full h-full bg-background rounded-b-lg rounded-tr-lg p-1">
-              <div className="flex flex-col w-full h-full bg-gray-50 p-6 rounded-lg border-2 group">
-                <FcServices className="w-14 h-14 md:w-12 md:h-12 xl:w-16 xl:h-16 text-primary" />
-                <h1 className="flex flex-col text-2xl xl:text-[1.8vw] text-foreground font-semibold mt-3 xl:mt-4 w-fit xl:w-full anim group cursor-default">
-                  Ship Faster
-                  <div className="w-[calc(100%+24px)] xl:w-0 xl:group-hover:w-[calc(100%+48px)] mt-1 mb-4 h-[2px] -translate-x-6 bg-gray-200 anim" />
-                </h1>
-                <p className="text-base lg:text-lg xl:text-[1.4vw] 2xl:text-[1.3vw] xl:leading-snug text-foreground/80 w-full lg:w-2/3 xl:w-full xl:pl-0">
-                  Build and ship your digital products faster with our team of
-                  experts.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-none mx-auto h-fit xl:h-auto bg-background/40 rounded-lg flex flex-col xl:anim-slow">
-            <div className="flex justify-between items-center">
-              <CardBadge text="X" className="translate-y-1 rounded-t-lg" />
-              <div className="flex gap-x-2 px-2">
-                <div className="w-3 h-3 bg-green-400 rounded-full" />
-                <div className="w-3 h-3 bg-yellow-400 rounded-full" />
-                <div className="w-3 h-3 bg-red-500 rounded-full" />
-              </div>
-            </div>
-            <div className="w-full h-full bg-background rounded-b-lg rounded-tr-lg p-1">
-              <div className="flex flex-col w-full h-full bg-gray-50 p-6 rounded-lg border-2 group">
-                <FcIdea className="w-14 h-14 md:w-12 md:h-12 xl:w-16 xl:h-16 text-primary" />
-                <h1 className="flex flex-col text-2xl xl:text-[1.8vw] text-foreground font-semibold mt-3 xl:mt-4 w-fit xl:w-full anim group cursor-default">
-                  Your Ideas
-                  <div className="w-[calc(100%+24px)] xl:w-0 group-hover:w-[calc(100%+24px)] xl:group-hover:w-[calc(100%+48px)] mt-1 mb-4 h-[2px] -translate-x-6 bg-gray-200 anim" />
-                </h1>
-                <p className="text-base lg:text-lg xl:text-[1.4vw] 2xl:text-[1.3vw] xl:leading-snug text-foreground/80 w-full lg:w-2/3 xl:w-full xl:pl-0">
-                  Here at Pixel Joy, we value your ideas and we will help you
-                  bring them to life.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full max-w-[400px] lg:max-w-[600px] xl:max-w-none mx-auto h-fit xl:h-auto bg-background/40 rounded-lg flex flex-col xl:anim-slow xl:translate-y-8">
-            <div className="flex justify-between items-center">
-              <CardBadge text="X" className="translate-y-1 rounded-t-lg" />
-              <div className="flex gap-x-2 px-2">
-                <div className="w-3 h-3 bg-green-400 rounded-full" />
-                <div className="w-3 h-3 bg-yellow-400 rounded-full" />
-                <div className="w-3 h-3 bg-red-500 rounded-full" />
-              </div>
-            </div>
-            <div className="w-full h-full bg-background rounded-b-lg rounded-tr-lg p-1">
-              <div className="flex flex-col w-full h-full bg-gray-50 p-6 rounded-lg border-2 group">
-                <FcCustomerSupport className="w-14 h-14 md:w-12 md:h-12 xl:w-16 xl:h-16 text-primary" />
-                <h1 className="flex flex-col text-2xl xl:text-[1.8vw] text-foreground font-semibold mt-3 xl:mt-4 w-fit xl:w-full anim group cursor-default">
-                  Full Support
-                  <div className="w-[calc(100%+24px)] xl:w-0 group-hover:w-[calc(100%+24px)] xl:group-hover:w-[calc(100%+48px)] mt-1 mb-4 h-[2px] -translate-x-6 bg-gray-200 anim" />
-                </h1>
-                <p className="text-base lg:text-lg xl:text-[1.4vw] 2xl:text-[1.3vw] xl:leading-snug text-foreground/80 w-full lg:w-2/3 xl:w-full xl:pl-0">
-                  Full control and support for your digital products. We are
-                  here to help.
-                </p>
-              </div>
-            </div>
-          </div>
+          {offerList.map((offer, index) => (
+            <Offer
+              key={index}
+              icon={offer.icon}
+              title={offer.title}
+              description={offer.description}
+            />
+          ))}
         </div>
       </section>
     </main>
