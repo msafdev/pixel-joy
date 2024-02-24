@@ -3,14 +3,16 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="w-full h-fit bg-foreground text-background flex flex-col justify-center items-center pad-x py-12 md:py-20 lg:py-28">
-      <div className="flex flex-col gap-y-6 h-fit lg:flex-row items-center justify-between w-full">
+    <footer className="w-full h-fit bg-foreground text-background flex flex-col justify-center items-center pad-x py-12 md:py-20 lg:py-28 relative overflow-hidden">
+      <span className="text-[24vw] absolute text-background/10 top-0 md:top-auto md:bottom-0 leading-[200px] select-none">PIXELJOY</span>
+
+      <div className="flex flex-col gap-y-6 h-fit lg:flex-row items-center justify-between w-full z-[2]">
         <h1 className="text-xl md:text-3xl font-medium text-center lg:text-left w-full md:w-2/3">
           Join our newsletter to keep updated with our latest news and offers.
         </h1>
         <div className="w-[2px] h-12 mx-8 bg-transparent hidden lg:block" />
         {/* Newsletter Button */}
-        <div className="w-full md:w-1/2 lg:w-1/3 bg-foreground flex group mt-auto">
+        <div className="w-full md:w-1/2 lg:w-1/3 flex group mt-auto">
           <input
             type="email"
             placeholder="Enter your email"
@@ -22,9 +24,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full h-[2px] bg-background/40 my-6 md:my-12" />
+      <div className="w-full h-[2px] bg-background/40 my-6 md:my-12 z-[2]" />
 
-      <div className="flex flex-col md:grid grid-cols-5 gap-6 md:gap-12 w-full">
+      <div className="flex flex-col md:grid grid-cols-5 gap-6 md:gap-12 w-full z-[2]">
         {/* Brand */}
         <div className="flex flex-col gap-y-3 col-span-2">
           <h1 className="text-3xl font-semibold">PIXELJOY</h1>
@@ -61,9 +63,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full h-[2px] bg-background/40 my-6 md:my-12" />
+      <div className="w-full h-[2px] bg-background/40 my-6 md:my-12 z-[2]" />
 
-      <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-y-6 lg:gap-y-0">
+      <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-y-6 lg:gap-y-0 z-[2]">
         <div className="flex flex-col md:flex-row justify-center text-center gap-y-2 gap-x-4 md:gap-x-6">
           <p className="text-base">© 2024 PixelJoy</p>
           <p className="text-base underline">Terms of Service</p>
