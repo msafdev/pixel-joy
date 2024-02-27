@@ -22,6 +22,10 @@
   .anim-slow {
     @apply transition-all ease-in-out duration-500;
   }
+
+  .anim-slower {
+    @apply transition-all ease-in-out duration-700;
+  }
 }
 
 @layer utilities {

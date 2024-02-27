@@ -29,7 +29,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="flex min-h-[calc(100vh-88px)] w-full flex-col">
+    <div className="flex h-full w-full flex-col">
       <div className="flex flex-col py-4 md:py-12 pad-x">
         <h1 className="text-4xl font-medium text-foreground">
           Explore what we have written for you
@@ -43,26 +43,26 @@ const Blog = () => {
       <div className="w-full h-[1px] bg-gray-200" />
 
       {/* Blog Badges */}
-      <div className="flex gap-x-2 py-2 items-center relative md:pad-x">
+      <div className="flex gap-x-2 pt-4 pb-2 items-center relative md:pad-x">
         <div className="no-scrollbar flex overflow-auto gap-x-2">
-          <button className="px-3 py-2 flex gap-2 items-center bg-neutral-100 hover:bg-neutral-200 border-2 border-transparent hover:border-gray-200 rounded-full font-medium text-foreground/60 hover:text-foreground anim text-sm hover:z-10 ml-4 md:ml-0">
-            <Notebook size={16} className="inline" />
+          <button className="px-3 py-2 flex gap-2 items-center group bg-neutral-100 hover:bg-neutral-50 border-2 border-transparent hover:border-gray-200 rounded-full font-medium text-foreground/60 hover:text-foreground anim text-sm hover:z-10 ml-4 md:ml-0">
+            <Notebook size={16} className="inline group-hover:text-emerald-600" />
             Journal
           </button>
-          <button className="px-3 py-2 flex gap-2 items-center bg-neutral-100 hover:bg-neutral-200 border-2 border-transparent hover:border-gray-200 rounded-full font-medium text-foreground/60 hover:text-foreground anim text-sm hover:z-10">
-            <Cpu size={16} className="inline" />
+          <button className="px-3 py-2 flex gap-2 items-center group bg-neutral-100 hover:bg-neutral-50 border-2 border-transparent hover:border-gray-200 rounded-full font-medium text-foreground/60 hover:text-foreground anim text-sm hover:z-10">
+            <Cpu size={16} className="inline group-hover:text-foreground" />
             Tech
           </button>
-          <button className="px-3 py-2 flex gap-2 items-center bg-neutral-100 hover:bg-neutral-200 border-2 border-transparent hover:border-gray-200 rounded-full font-medium text-foreground/60 hover:text-foreground anim text-sm hover:z-10">
-            <Palette size={16} className="inline" />
+          <button className="px-3 py-2 flex gap-2 items-center group bg-neutral-100 hover:bg-neutral-50 border-2 border-transparent hover:border-gray-200 rounded-full font-medium text-foreground/60 hover:text-foreground anim text-sm hover:z-10">
+            <Palette size={16} className="inline group-hover:text-violet-600" />
             Design
           </button>
-          <button className="px-3 py-2 flex gap-2 items-center bg-neutral-100 hover:bg-neutral-200 border-2 border-transparent hover:border-gray-200 rounded-full font-medium text-foreground/60 hover:text-foreground anim text-sm hover:z-10">
-            <Code size={16} className="inline" />
+          <button className="px-3 py-2 flex gap-2 items-center group bg-neutral-100 hover:bg-neutral-50 border-2 border-transparent hover:border-gray-200 rounded-full font-medium text-foreground/60 hover:text-foreground anim text-sm hover:z-10">
+            <Code size={16} className="inline group-hover:text-slate-800" />
             Tutorial
           </button>
-          <button className="px-3 py-2 flex gap-2 items-center bg-neutral-100 hover:bg-neutral-200 border-2 border-transparent hover:border-gray-200 rounded-full font-medium text-foreground/60 hover:text-foreground anim text-sm hover:z-10 mr-4 md:mr-0">
-            <Sparkles size={16} className="inline" />
+          <button className="px-3 py-2 flex gap-2 items-center group bg-neutral-100 hover:bg-neutral-50 border-2 border-transparent hover:border-gray-200 rounded-full font-medium text-foreground/60 hover:text-foreground anim text-sm hover:z-10 mr-4 md:mr-0">
+            <Sparkles size={16} className="inline group-hover:text-amber-500" />
             Portfolio
           </button>
         </div>
@@ -70,7 +70,7 @@ const Blog = () => {
         <div className="md:hidden absolute top-0 left-[90%] right-0 bottom-0 pointer-events-none bg-gradient-to-r from-transparent to-background" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full h-fit pad-x gap-4 py-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full h-fit pad-x gap-4 pt-4 pb-8">
         {!post
           ? /* Skeleton */
             Array.from({ length: 3 }).map((_, index) => (
@@ -92,10 +92,10 @@ const Blog = () => {
                   backgroundRepeat: "no-repeat",
                 }}
               >
-                <div className="z-[5] px-4 py-1 group-hover:-translate-y-20 translate-y-0 anim font-medium uppercase rounded-full bg-background/80 backdrop-blur text-foreground text-xs md:text-sm absolute right-0 top-0 m-4">
+                <div className="z-[5] px-4 py-1 trans group-hover:translate-x-10 translate-x-0 group-hover:-translate-y-20 translate-y-0 anim font-medium uppercase rounded-full bg-background/80 backdrop-blur text-foreground text-xs md:text-sm absolute right-0 top-0 m-4">
                   {p.node.category}
                 </div>
-                <div className="z-[5] w-full absolute bottom-0 p-3 bg-background group-hover:translate-y-full translate-y-0 anim flex flex-col">
+                <div className="z-[5] w-full absolute bottom-0 p-3 bg-background group-hover:translate-y-full translate-y-0 anim-slower flex flex-col">
                   <p className="text-[5vw] md:text-lg xl:text-xl font-medium">
                     {p.node.title}
                   </p>
