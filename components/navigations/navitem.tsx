@@ -12,6 +12,8 @@ import SquareButton from "../buttons/squarebutton";
 // Libs
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import Link from "next/link";
+import { navList } from "@/utils/constants/navlink";
 
 const NavItem = () => {
   const [currentTime, setCurrentTime] = useState("");
@@ -43,22 +45,16 @@ const NavItem = () => {
         </p>
       </div>
       <div className="hidden md:flex items-center text-lg ml-auto gap-x-6 font-medium">
-        <a href="#" className="flex flex-col items-center relative anim">
-          Service
-          <div className="w-[5px] h-[5px] bg-primary rounded-full absolute bottom-0 translate-y-[5px]" />
-        </a>
-        <a
-          href="#"
-          className="flex flex-col items-center opacity-70 relative anim"
-        >
-          Team
-        </a>
-        <a
-          href="#"
-          className="flex flex-col items-center opacity-70 relative anim"
-        >
-          Project
-        </a>
+        {navList.map((nav, index) => (
+          <Link
+            key={index}
+            href={nav.path}
+            className="flex flex-col items-start relative anim group text-foreground/60 hover:text-foreground"
+          >
+            {nav.name}
+            <div className="w-0 h-0 group-hover:w-1/2 group-hover:h-[2px] anim bg-primary rounded-full absolute bottom-0 translate-y-[4px]" />
+          </Link>
+        ))}
         <div className="flex items-center gap-x-3">
           <a href="#" className="anim">
             <SquareButton

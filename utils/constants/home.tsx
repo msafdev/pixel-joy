@@ -21,4 +21,22 @@ const offerList = [
   },
 ];
 
-export { offerList };
+const serviceList = [
+  {
+    number: "01",
+    title: "Web Development",
+    text: "Next, React, Astro",
+  },
+  {
+    number: "02",
+    title: "UI/UX Design",
+    text: "Figma, Sketch",
+  },
+  {
+    number: "03",
+    title: "No Code Development",
+    text: "Webflow, Framer",
+  },
+];
+
+export { offerList, serviceList };
