@@ -40,4 +40,39 @@ const getPosts = async () => {
   return response as FetchPostResponse;
 };
 
-export { getPosts };
+const getPostsCategory = async ({ category }: { category: string }) => {
+  const query = gql`
+    query FetchPost {
+      postsConnection(where: { category: ${category} }) {
+        edges {
+          node {
+            id
+            title
+            slug
+            thumbnail {
+              url
+            }
+            category
+            createdAt
+            content {
+              html
+            }
+            person {
+              name
+              id
+              avatar {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const response = await graphQLClient.request(query);
+
+  return response as FetchPostResponse;
+};
+
+export { getPosts, getPostsCategory };
