@@ -11,7 +11,7 @@ const BlogEmpty = () => {
         <span className="italic">yet</span>
       </p>
       <Link
-        href="/blog/new"
+        href="/blog"
         className="text-foreground uppercase font-medium pb-[2px] hover:pr-3 anim border-b-2 border-foreground"
       >
         Go back?

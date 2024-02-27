@@ -21,8 +21,6 @@ const Category = () => {
 
   const params = useParams<{ category: string }>();
 
-  console.log(params.category);
-
   useEffect(() => {
     if (params) {
       const fetchPosts = async () => {
