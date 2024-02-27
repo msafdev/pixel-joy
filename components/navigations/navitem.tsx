@@ -2,21 +2,27 @@
 
 import { useState, useEffect } from "react";
 
+// Next
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 // Icons
 import { BsTelephone, BsArrowRight } from "react-icons/bs";
-import { IconType } from "react-icons/lib";
 
 // Components
 import SquareButton from "../buttons/squarebutton";
 
 // Libs
+import { navList } from "@/utils/constants/navlink";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import Link from "next/link";
-import { navList } from "@/utils/constants/navlink";
+import { CalendarHeart } from "lucide-react";
 
 const NavItem = () => {
   const [currentTime, setCurrentTime] = useState("");
+  const pathname = usePathname();
+
+  console.log(pathname);
 
   useEffect(() => {
     const updateCurrentTime = () => {
@@ -44,35 +50,30 @@ const NavItem = () => {
           {currentTime || <Skeleton />}
         </p>
       </div>
-      <div className="hidden md:flex items-center text-lg ml-auto gap-x-6 font-medium">
+
+      <div className="hidden md:flex items-center text-xl ml-auto gap-x-6 font-medium">
         {navList.map((nav, index) => (
           <Link
             key={index}
             href={nav.path}
-            className="flex flex-col items-start relative anim group text-foreground/60 hover:text-foreground"
+            className={`flex flex-col items-start relative anim group hover:text-foreground ${
+              pathname === nav.path ||
+              (pathname.includes("/blog/") && nav.path.startsWith("/blog"))
+                ? "text-foreground"
+                : "text-foreground/60"
+            }`}
           >
             {nav.name}
-            <div className="w-0 h-0 group-hover:w-1/2 group-hover:h-[2px] anim bg-primary rounded-full absolute bottom-0 translate-y-[4px]" />
+            <div
+              className={`group-hover:w-1/2 group-hover:h-[2px] anim bg-foreground rounded-full absolute bottom-0 translate-y-[4px] ${
+                pathname === nav.path ||
+                (pathname.includes("/blog/") && nav.path.startsWith("/blog"))
+                  ? "w-1/2 h-[2px]"
+                  : "w-0 h-0"
+              }`}
+            />
           </Link>
         ))}
-        <div className="flex items-center gap-x-3">
-          <a href="#" className="anim">
-            <SquareButton
-              background="hover:bg-accent-foreground group bg-accent-foreground/90"
-              foreground="text-primary-foreground"
-            >
-              <BsTelephone className="w-4 h-4 group-hover:scale-110 anim group-hover:rotate-12" />
-            </SquareButton>
-          </a>
-          <a href="#" className="anim">
-            <SquareButton
-              background="hover:bg-primary group bg-primary/90"
-              foreground="text-primary-foreground"
-            >
-              <BsArrowRight className="w-4 h-4 group-hover:scale-110 anim group-hover:-rotate-12" />
-            </SquareButton>
-          </a>
-        </div>
       </div>
     </>
   );

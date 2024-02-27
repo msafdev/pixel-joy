@@ -6,15 +6,13 @@ import Image from "next/image";
 
 // Fetch
 import { getPostsCategory } from "@/hygraph";
-import { FetchPostResponse } from "@/utils/types";
+import { FetchPostResponse } from "@/utils/types/post";
 
 // Components
 import Breadcrumb from "@/components/shared/breadcrumb";
 import FilterLink from "@/components/shared/filterlink";
-
-// Icons
-import { MoveRight } from "lucide-react";
 import BlogEmpty from "@/components/errors/blogempty";
+import BlogCard from "@/components/shared/blogcard";
 
 const Category = () => {
   const [filteredPosts, setFilteredPosts] = useState<FetchPostResponse>();
@@ -39,7 +37,8 @@ const Category = () => {
         </h1>
         <p className="text-lg text-foreground/60 mt-2 max-w-[800px]">
           Discover our latest articles and blog posts, ranging from tech-talks,
-          tutorials, design, storytelling, and many more.
+          tutorials, design, storytelling, and{" "}
+          <span className="italic">many more</span>.
         </p>
         <div className="flex mt-4 w-full">
           <Breadcrumb />
@@ -59,50 +58,7 @@ const Category = () => {
         {filteredPosts ? (
           filteredPosts.postsConnection?.edges?.length ? (
             filteredPosts.postsConnection?.edges.map((p, index) => (
-              <div
-                key={index}
-                className="w-full h-auto aspect-[4/3] relative group overflow-hidden cursor-pointer bg-cover hover:bg-[50%]"
-              >
-                {/* Image */}
-                <Image
-                  src={p.node.thumbnail.url}
-                  alt={p.node.title}
-                  sizes="100%"
-                  className="w-full h-full flex grow"
-                  priority
-                  fill
-                />
-
-                {/* Overlay */}
-                <div className="z-[5] px-4 py-1 trans group-hover:translate-x-10 translate-x-0 group-hover:-translate-y-20 translate-y-0 anim font-medium uppercase rounded-full bg-background/80 backdrop-blur text-foreground text-xs md:text-sm absolute right-0 top-0 m-4">
-                  {p.node.category}
-                </div>
-
-                {/* Post Details */}
-                <div className="z-[5] w-full absolute bottom-0 p-3 bg-background group-hover:translate-y-full translate-y-0 anim-slower flex flex-col">
-                  <p className="text-[5vw] md:text-lg xl:text-xl font-medium">
-                    {p.node.title}
-                  </p>
-
-                  {/* Avatar */}
-                  <div className="flex gap-x-2 items-center">
-                    <Image
-                      src={p.node.person.avatar.url}
-                      alt={p.node.person.name}
-                      width={35}
-                      height={35}
-                      className="rounded-full overflow-hidden"
-                    />
-                    <MoveRight size={16} className="text-foreground/60 mr-2" />
-                    <p className="text-foreground/60 font-medium">
-                      {p.node.person.name}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Hover Effect */}
-                {/* <div className="absolute inset-0 bg-foreground/20 hover:opacity-0 opacity-100 transition-opacity duration-300 z-0" /> */}
-              </div>
+              <BlogCard key={index} post={p} />
             ))
           ) : (
             <BlogEmpty />

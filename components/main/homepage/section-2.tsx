@@ -27,7 +27,7 @@ const Section2 = () => {
           text={service.text}
         />
       ))}
-      <div className="flex pad-x pt-4 pb-4 md:pb-6 justify-end">
+      <div className="flex pad-x pt-4 pb-4 md:pb-8 justify-end">
         <Link
           href="/"
           className="border-b-2 border-foreground/80 pb-1 hover:pl-3 group flex items-center w-fit anim gap-x-3 text-foreground anim"

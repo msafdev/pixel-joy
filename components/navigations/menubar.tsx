@@ -33,11 +33,11 @@ const MenuBar = () => {
         />
       </div>
       <div
-        className={`w-full min-h-screen absolute top-0 left-0 bg-foreground text-background z-20 transition-all ease-in-out duration-500 pt-20 ${
+        className={`w-full min-h-screen absolute top-0 left-0 bg-background text-foreground z-20 transition-all ease-in-out duration-500 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <h1 className="text-2xl font-medium uppercase text-center">Menu</h1>
+        
       </div>
     </>
   );

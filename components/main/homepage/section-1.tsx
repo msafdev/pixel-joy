@@ -1,20 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// Libs
+import Balancer from "react-wrap-balancer";
+
 // Fonts
 import { Poppins } from "next/font/google";
 
 // Assets
-import Ava1 from "@/public/assets/avatar/avatar-1.jpg";
-import Ava2 from "@/public/assets/avatar/avatar-2.jpg";
-import Ava3 from "@/public/assets/avatar/avatar-3.png";
-import Ava4 from "@/public/assets/avatar/avatar-4.png";
+import Ava1 from "@/public/assets/avatar/avatar-1.png";
+import Ava2 from "@/public/assets/avatar/avatar-2.png";
 
 // Icons
-import { FaArrowRight, FaAsterisk } from "react-icons/fa";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { Asterisk, MoveRight } from "lucide-react";
 
-const AvatarAsset = [Ava1, Ava2, Ava3, Ava4];
+const AvatarAsset = [Ava1, Ava2];
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,22 +23,25 @@ const poppins = Poppins({
 
 const Section1 = () => {
   return (
-    <section className="flex flex-col md:items-center md:justify-center w-full pad-x py-4 md:py-12 lg:py-20 gap-y-6 lg:gap-y-8">
+    <section className="flex flex-col items-center md:items-center md:justify-center w-full pad-x py-4 md:py-12 lg:py-20 gap-y-6 lg:gap-y-8">
       {/* Main Text */}
+
       <h1
         className={`text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center font-medium ${poppins.className}`}
       >
-        Transform Your Business{" "}
-        <FaArrowRight className="inline-block w-4 h-4 lg:w-8 lg:h-8 text-foreground/60" />{" "}
-        With Delightful Digital Experiences{" "}
-        <FaAsterisk className="inline-block w-4 h-4 lg:w-8 lg:h-8 text-primary" />
+        <Balancer>
+          Transform Your Business{" "}
+          <MoveRight className="inline-block w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-500" />{" "}
+          With Delightful Digital Experiences{" "}
+          <Asterisk className="inline-block w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-primary" />
+        </Balancer>
       </h1>
 
       {/* Middle Text */}
       <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between md:w-[90%] gap-x-12 gap-y-6">
         {/* Sub Text */}
         <div className="flex justify-center md:justify-start gap-x-4 max-w-lg">
-          <FaArrowRightLong className="w-5 h-5 text-foreground hidden md:block translate-y-1" />
+          <MoveRight className="w-5 h-5 text-foreground hidden md:block translate-y-1" />
           <p className="text-base font-medium text-center md:text-left text-foreground/80 w-[90%] md:text-lg lg:text-xl">
             We are a digital product design and development company. We help
             businesses build delightful digital experiences.
@@ -60,7 +63,7 @@ const Section1 = () => {
 
       {/* Feature */}
       <div className="w-full md:w-[90%] grid md:grid-cols-4 lg:grid-cols-5 gap-y-6">
-        <div className="flex md:flex-col flex-wrap gap-y-2 justify-around md:justify-center items-center md:items-start">
+        <div className="flex md:flex-col flex-wrap gap-y-2 gap-x-2 justify-around md:justify-center items-center md:items-start">
           <div className="flex items-center -space-x-3">
             {AvatarAsset.map((avatar, index) => (
               <div

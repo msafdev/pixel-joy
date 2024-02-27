@@ -1,19 +1,15 @@
 const navList = [
   {
-    name: "About",
-    path: "/",
-  },
-  {
     name: "Blog",
     path: "/blog",
   },
   {
     name: "Team",
-    path: "/",
+    path: "/team",
   },
   {
     name: "Project",
-    path: "/",
+    path: "/project",
   },
 ];
 

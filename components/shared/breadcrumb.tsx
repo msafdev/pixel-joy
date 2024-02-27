@@ -15,7 +15,10 @@ const Breadcrumb = () => {
       <code className="mr-3 font-semibold">{">"}</code>
       {segments.map((segment, index) => (
         <div className="flex items-center" key={index}>
-          <Link href={`/${segment}`} className="font-medium text-foreground/60">
+          <Link
+            href={`/${segment}`}
+            className="font-medium text-foreground/60 hover:underline underline-offset-4"
+          >
             {segment}
           </Link>
           {index !== segments.length - 1 && (

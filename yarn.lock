@@ -935,6 +935,11 @@ bail@^2.0.0:
   resolved "https://registry.yarnpkg.com/bail/-/bail-2.0.2.tgz#d26f5cd8fe5d6f832a31517b9f7c356040ba6d5d"
   integrity sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==
 
+balance-text@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/balance-text/-/balance-text-3.3.1.tgz#d1d7c182c9b60c57028383c8ed19765b6a6b1603"
+  integrity sha512-tpnHvo1w0rJ5rbu+jZKf7NLKKg6XZ6eAwREP/9jEDJ+ZTBi6jQFqn/UGARL3/oqD8SgQbyTwBXBjhKDdTgoPRw==
+
 balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
@@ -3400,6 +3405,11 @@ react-markdown@^9.0.0:
     unified "^11.0.0"
     unist-util-visit "^5.0.0"
     vfile "^6.0.0"
+
+react-wrap-balancer@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-wrap-balancer/-/react-wrap-balancer-1.1.0.tgz#3d246573413b936b799f29a1549cd217b948234c"
+  integrity sha512-EhF3jOZm5Fjx+Cx41e423qOv2c2aOvXAtym2OHqrGeMUnwERIyNsRBgnfT3plB170JmuYvts8K2KSPEIerKr5A==
 
 react@^18:
   version "18.2.0"

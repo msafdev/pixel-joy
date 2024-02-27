@@ -1,4 +1,6 @@
-import { FetchPostResponse } from "@/utils/types";
+import { FetchPostResponse } from "@/utils/types/post";
+import { FetchPersonResponse } from "@/utils/types/people";
+
 import { GraphQLClient, gql } from "graphql-request";
 
 const graphQLClient = new GraphQLClient(
@@ -75,4 +77,33 @@ const getPostsCategory = async ({ category }: { category: string }) => {
   return response as FetchPostResponse;
 };
 
-export { getPosts, getPostsCategory };
+const getPeople = async () => {
+  const query = gql`
+    query FetchPeople {
+      peopleConnection {
+        edges {
+          node {
+            id
+            name
+            role
+            bio
+            category
+            avatar {
+              id
+              url
+            }
+            posts {
+              id
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const response = await graphQLClient.request(query);
+
+  return response as FetchPersonResponse;
+};
+
+export { getPosts, getPostsCategory, getPeople };

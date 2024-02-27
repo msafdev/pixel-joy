@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const BlogEmpty = () => {
   return (
-    <div className="flex flex-col items-center justify-center col-span-3 py-12 md:py-24 pad-x">
+    <div className="flex flex-col items-center justify-center col-span-3 py-12 md:py-20 pad-x">
       <h1 className="text-xl md:text-3xl text-center font-semibold text-gray-800">
         Sorry!
       </h1>
