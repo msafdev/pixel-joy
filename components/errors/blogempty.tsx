@@ -12,6 +12,7 @@ const BlogEmpty = () => {
       </p>
       <Link
         href="/blog"
+        aria-label="Go back"
         className="text-foreground uppercase font-medium pb-[2px] hover:pr-3 anim border-b-2 border-foreground"
       >
         Go back?

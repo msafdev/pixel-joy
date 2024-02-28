@@ -30,6 +30,7 @@ const Section2 = () => {
       <div className="flex pad-x pt-4 pb-4 md:pb-8 justify-end">
         <Link
           href="/"
+          aria-label="View all"
           className="border-b-2 border-foreground/80 pb-1 hover:pl-3 group flex items-center w-fit anim gap-x-3 text-foreground anim"
         >
           <div className="text-base md:text-lg uppercase font-medium">

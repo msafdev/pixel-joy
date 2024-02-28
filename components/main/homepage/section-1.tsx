@@ -52,6 +52,7 @@ const Section1 = () => {
         <div className="flex items-center justify-center md:justify-start min-w-[120px]">
           <Link
             href="/"
+            aria-label="Learn More"
             className="border-b-2 border-foreground/80 pb-1 hover:pr-3 group flex items-end w-fit anim gap-x-3 text-foreground anim"
           >
             <div className="text-base md:text-lg uppercase font-medium">
@@ -80,7 +81,8 @@ const Section1 = () => {
             ))}
           </div>
           <Link
-            href="/"
+            href="/team"
+            aria-label="Our Team"
             className="border-b-2 border-foreground/80 pb-1 hover:pl-3 group flex items-end w-fit anim gap-x-3 text-foreground anim min-w-[70px]"
           >
             <div className="text-sm md:text-base uppercase font-medium">

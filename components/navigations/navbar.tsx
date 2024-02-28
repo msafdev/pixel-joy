@@ -11,7 +11,8 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           href={"/"}
-          className="w-fit flex items-start md:items-center gap-x-1 group peer cursor-pointer z-30"
+          aria-label="Pixel Joy"
+          className="w-fit flex items-start md:items-center gap-x-1 group peer cursor-pointer"
         >
           <h1 className="text-xl md:text-2xl uppercase z-10 bg-background leading-none md:leading-normal">
             Pixel

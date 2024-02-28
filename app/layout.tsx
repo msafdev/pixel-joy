@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 
 // Components
+import NotFound from "./not-found";
 import Navbar from "@/components/navigations/navbar";
 import Footer from "@/components/navigations/footer";
 

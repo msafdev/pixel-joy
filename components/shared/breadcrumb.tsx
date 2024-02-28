@@ -17,6 +17,7 @@ const Breadcrumb = () => {
         <div className="flex items-center" key={index}>
           <Link
             href={`/${segment}`}
+            aria-label={segment}
             className="font-medium text-foreground/60 hover:underline underline-offset-4"
           >
             {segment}

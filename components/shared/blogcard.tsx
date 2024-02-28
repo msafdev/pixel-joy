@@ -20,8 +20,8 @@ const BlogCard = ({ post }: { post: any }) => {
       />
 
       {/* Overlay */}
-      <div className="z-[5] px-4 py-1 trans group-hover:translate-x-10 translate-x-0 group-hover:-translate-y-20 translate-y-0 anim-slow font-medium uppercase rounded-full bg-background/80 backdrop-blur text-foreground text-xs md:text-sm absolute top-0 right-0 m-2">
-        {post.node.category}
+      <div className="z-[5] px-4 py-1 trans group-hover:translate-x-10 translate-x-0 group-hover:-translate-y-20 translate-y-0 anim-slow font-medium uppercase rounded-full bg-background/80 backdrop-blur text-foreground text-xs md:text-sm absolute top-0 right-0 m-3">
+        <code className="mr-1 text-sm">#</code>{post.node.category}
       </div>
 
       {/* Post Details */}

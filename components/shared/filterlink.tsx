@@ -20,6 +20,7 @@ const FilterLink = () => {
     <div className="no-scrollbar flex overflow-auto gap-x-2">
       <Link
         href={"/blog"}
+        aria-label="All"
         className={`px-3 py-2 capitalize flex gap-2 items-center group bg-neutral-100 hover:bg-neutral-50 border-2 hover:border-gray-200 rounded-full font-medium hover:text-foreground anim text-sm hover:z-10 ml-4 md:ml-0 ${
           params.category === undefined
             ? "text-foreground bg-neutral-50"
@@ -38,6 +39,7 @@ const FilterLink = () => {
       </Link>
       <Link
         href={"/blog/general"}
+        aria-label="General"
         className={`px-3 py-2 capitalize flex gap-2 items-center group bg-neutral-100 hover:bg-neutral-50 border-2 hover:border-gray-200 rounded-full font-medium hover:text-foreground anim text-sm hover:z-10 ${
           params.category === "general"
             ? "text-foreground bg-neutral-50"
@@ -54,6 +56,7 @@ const FilterLink = () => {
       </Link>
       <Link
         href={"/blog/code"}
+        aria-label="Code"
         className={`px-3 py-2 capitalize flex gap-2 items-center group bg-neutral-100 hover:bg-neutral-50 border-2 hover:border-gray-200 rounded-full font-medium hover:text-foreground anim text-sm hover:z-10 ${
           params.category === "code"
             ? "text-foreground bg-neutral-50"
@@ -70,6 +73,7 @@ const FilterLink = () => {
       </Link>
       <Link
         href={"/blog/design"}
+        aria-label="Design"
         className={`px-3 py-2 capitalize flex gap-2 items-center group bg-neutral-100 hover:bg-neutral-50 border-2 hover:border-gray-200 rounded-full font-medium hover:text-foreground anim text-sm hover:z-10 ${
           params.category === "design"
             ? "text-foreground bg-neutral-50"
@@ -86,6 +90,7 @@ const FilterLink = () => {
       </Link>
       <Link
         href={"/blog/portfolio"}
+        aria-label="Portfolio"
         className={`px-3 py-2 capitalize flex gap-2 items-center group bg-neutral-100 hover:bg-neutral-50 border-2 hover:border-gray-200 rounded-full font-medium hover:text-foreground anim text-sm hover:z-10 mr-4 md:mr-0 ${
           params.category === "portfolio"
             ? "text-foreground bg-neutral-50"

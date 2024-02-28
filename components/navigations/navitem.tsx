@@ -22,8 +22,6 @@ const NavItem = () => {
   const [currentTime, setCurrentTime] = useState("");
   const pathname = usePathname();
 
-  console.log(pathname);
-
   useEffect(() => {
     const updateCurrentTime = () => {
       const now = new Date();
@@ -56,6 +54,7 @@ const NavItem = () => {
           <Link
             key={index}
             href={nav.path}
+            aria-label={nav.name}
             className={`flex flex-col items-start relative anim group hover:text-foreground ${
               pathname === nav.path ||
               (pathname.includes("/blog/") && nav.path.startsWith("/blog"))
